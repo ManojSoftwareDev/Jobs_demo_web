@@ -81,7 +81,7 @@ class Jobs extends Component {
                 // We are doing it by substring, Which will check it posted day is in hours ago or days, if it days less than or equals to 7,
                 // it would return result. This can be accomplised by moment(this is library to manage date/time) as well
                 filteredData = this.state.records.filter(function (job) {
-                    return job.postedDate.substr(-5, 1) == 'h' ? true : job.postedDate.substr(-5, 1) == 'd' ? job.postedDate.substr(0, job.postedDate.length - 5) <= 7 ? true : false : false;
+                    return job.postedDate.substr(-5, 1) === 'h' ? true : job.postedDate.substr(-5, 1) === 'd' ? job.postedDate.substr(0, job.postedDate.length - 5) <= 7 ? true : false : false;
                 })
 
                 // Set filtered data to state with limit 10.
